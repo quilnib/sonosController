@@ -29,13 +29,13 @@ def previous(channel):
     print "called previous"
     sonos.previous()
 
-def placebo(channel):
-    print "called placebo"
-    
+def turnUp(channel):
+    print "called turnUp"
+    sonos.volume += 10
     
 io.add_event_detect(skip_pin, io.RISING, callback=skip, bouncetime=300)
 io.add_event_detect(previous_pin, io.RISING, callback=previous, bouncetime=300)
-io.add_event_detect(nothing_pin, io.RISING, callback=placebo, bouncetime=300)
+io.add_event_detect(nothing_pin, io.RISING, callback=turnUp, bouncetime=300)
 
 
 while True: #This needs to be called last, since it runs forever
