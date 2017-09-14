@@ -11,7 +11,7 @@ io.setup(skip_pin, io.IN, pull_up_down=io.PUD_UP)
 io.setup(alt1_pin, io.IN, pull_up_down=io.PUD_UP)
 io.setup(alt2_pin, io.IN, pull_up_down=io.PUD_UP)
 sonos = None
-deviceName = "East"
+deviceName = "Big Ballroom"
 
 for device in soco.discover():
     if device.player_name == deviceName:
